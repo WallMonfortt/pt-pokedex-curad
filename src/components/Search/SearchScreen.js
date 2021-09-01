@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { Link } from 'react-router-dom'
 import { getPoke } from '../../helpers/getPokemons'
 import { useForm } from '../../hooks/useForm'
 import {PokemonScreen} from '../pokemons/PokemonScreen'
@@ -16,7 +17,7 @@ export const SearchScreen = () => {
   const handleSearch = async(e) =>{
     e.preventDefault();
     {
-      const resp = await getPoke(searchText);
+      const resp = await getPoke(searchText.toLowerCase());
       setPokemon(resp);
     }
    
@@ -58,6 +59,7 @@ export const SearchScreen = () => {
 
           {(pokemon  && pokemon.count === undefined) && <PokemonScreen pokemon={pokemon}/>}
         </div>
+        <Link className={"pokedex__btn-float"} to="/"><i class="fas fa-chevron-circle-left"></i></Link>
       </div>
     </div>
   )

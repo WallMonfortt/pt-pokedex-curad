@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { PokemonCard } from './PokemonCard';
 import Pagination from '@material-ui/lab/Pagination';
+import { Link } from 'react-router-dom';
 
 export const PokemonList = ({pokemons, totalPokemons,page,total,setTotal,setPage}) => {
   const [totalPages, setTotalPages] = useState( Math.ceil(totalPokemons / total))
@@ -46,6 +47,7 @@ export const PokemonList = ({pokemons, totalPokemons,page,total,setTotal,setPage
         />
       ))}
       </div>
+      <Link className={"pokedex__btn-float"} to="/search"><i class="fas fa-search"></i></Link>
     </>
   )
 }

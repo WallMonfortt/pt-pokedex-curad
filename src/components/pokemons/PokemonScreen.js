@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const PokemonScreen = ({pokemon}) => {
-  console.log(pokemon);
   return (
     <div className="container">
       <h1>{pokemon.name}</h1>
