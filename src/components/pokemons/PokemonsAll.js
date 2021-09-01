@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getPokeData, getPokemons } from '../../helpers/getPokemons'
 import { PokemonList } from './PokemonList';
-import { SearchScreen } from '../Search/SearchScreen';
 
 export const PokemonsAll = () => {
   const [totalPokemons, setTotalPokemons] = useState(0);

@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { getPokeData, getPokemons } from '../../helpers/getPokemons'
+import React, { useEffect, useState } from 'react'
 import { PokemonCard } from './PokemonCard';
 import Pagination from '@material-ui/lab/Pagination';
 
